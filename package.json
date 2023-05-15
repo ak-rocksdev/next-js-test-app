@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "chromatic": "chromatic --project-token=chpt_1b01594fa2732b4",
+    "chromatic:dev": "chromatic --project-token=chpt_1b01594fa2732b4 --auto-accept-changes",
+    "chromatic:staging": "chromatic --project-token=chpt_1b01594fa2732b4 --auto-accept-changes --build-script-name=-b"
   },
   "dependencies": {
     "@types/node": "20.1.4",
@@ -21,5 +25,8 @@
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "chromatic": "^6.17.4"
   }
 }
